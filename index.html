@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(150, 0, 255);
+        }
+        h1{
+            text-align: center;
+        }
+        p{
+            text-align: right;
+        }
+        #direccion{
+            float: right;
+            text-align: right;
+        }
+    </style>
+    
+    
+</head>
+<body>
+
+    <header>
+
+    <h1>Titulo de la pagina</h1>
+
+    </header>
+
+    <section>
+    <form action="base.db" method="get">
+        
+        <label for="nombre"><b>Nombre:</b></label>
+        <input type="text" class="input" placeholder="Ingrese su Nombre">
+
+        <br>
+        
+        <label for="Apellido"><b>Apellido:</b></label>
+        <input type="text" class="input" placeholder="Ingres su Apellido">
+
+        <br>
+
+        <label for="Edad"><b>Edad:</b></label>
+        <input type="numbrer" class="input" placeholder="Ingrese la Edad">
+
+        <br>
+
+        <label for="Telefono"><b>Telefono:</b></label>
+        <input type="text" class="input" placeholder="Ingrese el Telefono">
+
+        <br>
+
+        <label for="Ciudad"><b>Ciudad:</b></label>
+        <select id="Ciudad">
+            <optgroup label="Buenos aires">
+                  <option value="Chascomus">Chascomus</option>
+                  <option value="Castelli">Castelli</option>
+                  <option value="Dolores">Dolores</option>
+                  <option value="Ranchos">Ranchos</option>
+                  <option value="Belgrano">Belgrano</option>
+                  <option value="Otra">Otra ciudad en PBA</option>
+      </optgroup>
+>
+      <optgroup>
+      	<option value="Otra">Otra ciudad fuera de PBA</option>
+      </optgroup>
+      </select>
+      
+      
+        <br>
+
+        
+        <label><b>Eligue una de las siguientes bandas de musica o ingresa una nueva (flecha abajo para ver todos):</b></label>
+        <input list="Musica" >
+                   <datalist id="Musica">
+                     <option value="Deep Purple">
+                     <option value="AC/DC">
+                     <option value="Red Hot Chilli Peppers">
+                     <option value="Daft Punk">
+                     <option value="Soda Stereo">
+                     <option value="The Beatles">
+                   </datalist>
+
+                   <br>
+
+                   <label for="musica"><b>Otro dato:</b></label>
+                   <input list="musica">
+                   
+                   <datalist id="musica">
+                     ...
+                   </datalist>
+
+        <br>
+
+        <a href=><button type="submit" id="Boton">Mostrar los datos ingresados</button></a>
+
+  
+    </form>  
+
+    </section>
+
+    <footer>
+        <p>Copyright 2024</p>
+        
+        <br>
+
+        <a href="mailto:lobolucaswe@gmail.com" id="direccion"><p>contacto</p></a>
+    </footer>
+</body>
+</html>
