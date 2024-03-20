@@ -1,0 +1,35 @@
+body{
+    background-color: blue
+}
+
+#hola{
+    text-align: center;
+    font-family: monospace;
+    font-size: 20px;
+    color: white;
+}
+
+div{
+    font-family: arial;
+    color: pink;
+}
+
+.divs{
+    text-align: center;
+    font-family: serif;
+    font-size:small;
+    color: whitesmoke;
+}
+footer{
+    text-align: end;
+}
+
+label{
+    font-size: medium;
+}
+
+input, textarea{
+    background-color: silver;
+    border: solid 1px black;
+    outline: solid 1px rgb(110, 0, 110);
+}
