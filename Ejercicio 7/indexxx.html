@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Selector JavaScript</title>
+    </head>
+    <body>
+
+        <input type="text" class="formulario" id="nombre" placeholder="Ingrese el nombre" value="Juancito">
+        <input type="text" class="formulario" id="apellido" placeholder="Ingrese el apellido">
+        <input type="text" class="formulario" id="telefono" placeholder="Ingrese el telefono">
+        <div id="contenido">
+            <span>Contenido 1</span>
+            <span>Contenido 2</span>
+            <span>Contenido 3</span>
+        </div>
+
+        <script>
+
+            const nombre = document.getElementById("nombre").value;
+            //usa document.getElementById("nombre") para obtener el elemento con el id "nombre".
+            console.log("Valor del elemento con id 'nombre':", nombre);
+
+            const nombreLength = document.getElementById("nombre").value.length;
+            //Se usa nuevamente document.getElementById("nombre"), pero esta vez se obtiene la longitud 
+            //(número de caracteres) del valor del campo.
+            console.log("Cantidad de letras en el elemento 'nombre':", nombreLength);
+
+            const formularios = document.getElementsByClassName("formulario");
+            // se usa document.getElementsByClassName("formulario") para obtener todos los elementos que 
+            //tienen la clase "formulario"
+            console.log("Cantidad de elementos con clase 'formulario':", formularios.length);
+            ////length se usa para mostrar los elementos con clase.
+
+            console.log("IDs de elementos con clase 'formulario':");
+            for (let i = 0; i < formularios.length; i++) {
+                console.log(" -", formularios[i].id);
+            }
+            //Esto es para imprimir el id de cada elemento con la clase "formulario"
+
+            document.getElementById("contenido").style.backgroundColor = 'red';
+            //se usa document.getElementById("contenido") para obtener el elemento con el id "contenido",
+            //y se cambia su color de fondo a rojo. Se usa la propiedad style.backgroundColor para hacer esto.
+
+            const spans = document.getElementsByTagName("span");
+            //se usa document.getElementsByTagName("span") para obtener todos los elementos "span" en la 
+            //página y luego se muestra la cantidad total usando.
+            console.log("Cantidad de elementos 'span':", spans.length);
+            //length. En este caso, hay tres elementos "span".
+        </script>
+
+    </body>
+</html>
