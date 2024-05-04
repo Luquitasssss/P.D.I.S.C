@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Objetos json</title>
+    </head>
+    <body>
+        <div id="contenido"></div>
+        <script>
+
+            console.log("Ejecicio 1");
+            
+            let persona1 = { "nombre": "Lucas", "apellido": "Orbe" };
+            console.log(persona1);
+
+
+            console.log("Ejecicio 2");
+            console.log("Nombre:", persona1.nombre);
+
+            console.log("Apellido:", persona1.apellido);
+
+
+            console.log("Ejecicio 3");
+
+            let persona2 = { "nombre": "Agustina", "apellido": "Cipolla" };
+
+            let personas = [persona1, persona2];
+
+            personas.forEach(personaActual => {
+                console.log(personaActual);
+            });
+
+
+            console.log("Ejecicio 4");
+
+            let persona3 = {};
+            persona3.nombre= "Matias";
+            persona3.apellido="Morelli";
+            persona3.edad =  18;
+
+            personas.push(persona3);
+
+            personas.forEach(personaActual => {
+                console.log(personaActual);
+            });
+
+
+            console.log("Ejecicio 5");
+
+            const myObj = {"nombre": "Luciano", "edad": 72, "ciudad": "Chascomus"};//Objeto de JavaScript.
+            const myJSON = JSON.stringify(myObj);//Esto es para convertir el objeto a cadena JSON.
+
+            console.log(myJSON);
+            
+            //Defini una cadena JSON.
+            const text = '{"nombre":"Mercedes","edad":"18"}';
+            //Esto es para convertir la cadena JSON a objeto JavaScript.
+            let obj = JSON.parse(text);
+
+            console.log(obj);
+
+
+            console.log("Ejecicio 6");
+
+            // Crear un objeto y convertirlo a cadena JSON
+            const myObj1 = { nombre: "Juancito", edad: 31, ciudad: "Chascomus" };
+            const myJSON1 = JSON.stringify(myObj1); // Lo use para convertir a JSON
+
+            // Guarde la cadena JSON en localStorage.
+            localStorage.setItem("testJSON", myJSON1);
+
+            // Lo use para recuperar la cadena JSON desde localStorage.
+            let text1 = localStorage.getItem("testJSON");
+            console.log("Valor en localStorage:", text1); // Muestra el valor recuperado.
+
+            // Converti la cadena JSON a objeto JavaScript.
+            const objRecuperado = JSON.parse(text1);
+            console.log("Objeto recuperado:", objRecuperado);
+
+
+            console.log("Ejecicio 7");
+
+            // Defini un objeto con atributos para una mascota.
+            let miMascota = { nombre: "Cloy", raza: "no se", edad: 9 };
+
+            // Cree un string literal que usa las variables del objeto.
+            let descripcion = `El nombre de mi mascota es ${miMascota.nombre} y tiene ${miMascota.edad} años.`;
+
+            // Se muestra la descripcion.
+            console.log(descripcion);
+
+
+            console.log("Ejecicio 8");
+
+            let objetosRetirados = [
+                { tipo: "netbook", codigo: 15, retirada: true },
+                { tipo: "netbook", codigo: 1, retirada: false }
+            ];
+
+            let miHtml = "";
+
+            document.querySelector("#contenido").innerHTML = "";
+
+            objetosRetirados.forEach(elem => {
+                miHtml += `
+                    <div>
+                        <span>Tipo: ${elem.tipo}</span>
+                        <span> Código: ${elem.codigo}</span>
+                        <span> Retirada: ${elem.retirada}</span>
+                    </div>
+                `;
+            });
+
+            document.querySelector("#contenido").innerHTML = miHtml;
+
+        </script>
+    </body>
+</html>
