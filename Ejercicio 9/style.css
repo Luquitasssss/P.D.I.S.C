@@ -1,0 +1,53 @@
+body{
+    background-color: #323232;
+}
+/* Estilos para la tabla */
+table {
+    border-collapse: collapse;
+    margin: 20px auto;
+    width: 50%;
+    font-family: Arial, sans-serif;
+}
+
+td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Estilos para los campos de texto */
+input[type="text"] {
+    width: 80%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Estilos para el botón */
+input[type="button"] {
+    background-color: #4CAF50; /* Verde */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+input[type="button"]:hover {
+    background-color: #45a049; /* Cambio de color al pasar el mouse */
+}
+
+/* Estilos para las filas */
+tr:nth-child(odd) {
+    background-color: #f9f9f9; /* Colores alternados en las filas */
+}
+
+tr:nth-child(even) {
+    background-color: #e9e9e9;
+}
+
+/* Estilo para los checkboxes */
+input[type="checkbox"] {
+    transform: scale(1.2); /* Hacer los checkboxes un poco más grandes */
+}

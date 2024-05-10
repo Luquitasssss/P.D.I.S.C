@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Eventos Js</title>
+    </head>
+    <body>
+        <p>Si no supiste amar...</p>
+        <div id="div1">Ahora te puedes marchar</div>
+        <input type="button" onclick="toggleVisibility()" value="Mostrar/Ocultar">
+       
+        <script>
+           function toggleVisibility() {
+               let div = document.querySelector("#div1");
+               let currentDisplay = div.style.display;
+               
+               if (currentDisplay === "none") {
+                   div.style.display = "block";   
+               } else {
+                   div.style.display = "none";
+               }
+           }
+       </script>
+   </body>
+</html>
