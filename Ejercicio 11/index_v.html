@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dibujar Palabra</title>
+    <style>
+        #dibujo h1{
+            margin: 0;
+            display: inline;
+        }
+        #dibujo1 h1{
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Horizontal Section -->
+    <h2>Dibujar Palabra en vertical</h2>
+    <label for="palabra">Palabra:</label>
+    <input type="text" id="palabra">
+    <button onclick="dibujarPalabra()">Dibujar</button>
+    <div id="dibujo"></div>
+
+    <script>
+        function dibujarPalabra() {
+            let palabra = document.getElementById("palabra").value;
+            let dibujo = document.getElementById("dibujo");
+
+            dibujo.innerHTML = ''; // Limpiamos el contenido del dibujo
+
+            for (let letra of palabra) {
+                let span = document.createElement("span");
+                span.innerHTML = `<h1>${letra}</h1>`;
+                span.onclick = function() { mostrarLetra(letra); };
+                dibujo.appendChild(span);
+                dibujo.appendChild(document.createTextNode("\u00A0")); // Add a non-breaking space
+            }
+        }
+
+        function mostrarLetra(letra) {
+            alert("La letra es: " + letra);
+        }
+    </script>
+</body>
+</html>

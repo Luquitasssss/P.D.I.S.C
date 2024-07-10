@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dibujar Palabra</title>
+    <style>
+        #dibujo h1{
+            margin: 0;
+            display: inline;
+        }    
+        #dibujo1 h1{
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Horizontal Section -->
+    <h2>Dibujar Palabra en Horizontal</h2>
+    <label for="palabra">Palabra:</label>
+    <input type="text" id="palabra">
+    <button onclick="dibujarPalabra()">Dibujar</button>
+    <div id="dibujo"></div>
+
+    <br>
+
+    <!-- Vertical Section -->
+    <h2>Dibujar Palabra en Vertical</h2>
+    <label for="palabra1">Palabra:</label>
+    <input type="text" id="palabra1">
+    <button onclick="dibujarPalabra1()">Dibujar</button>
+    <div id="dibujo1"></div>
+
+    <script>
+        function dibujarPalabra() {
+            let palabra = document.getElementById("palabra").value;
+            let dibujo = document.getElementById("dibujo");
+
+            dibujo.innerHTML = ''; // Limpiamos el contenido del dibujo
+
+            for (let letra of palabra) {
+                let span = document.createElement("span");
+                span.innerHTML = `<h1>${letra}</h1>`;
+                span.onclick = function() { mostrarLetra(letra); };
+                dibujo.appendChild(span);
+            }
+        }
+
+        function dibujarPalabra1() {
+            let palabra1 = document.getElementById("palabra1").value;
+            let dibujo1 = document.getElementById("dibujo1");
+
+            dibujo1.innerHTML = ''; // Limpiamos el contenido del dibujo
+
+            for (let letra1 of palabra1) {
+                let span1 = document.createElement("span");
+                span1.innerHTML = `<h1>${letra1}</h1>`;
+                span1.onclick = function() { mostrarLetra(letra1); };
+                dibujo1.appendChild(span1);
+                dibujo1.appendChild(document.createElement("br"));
+            }
+        }
+
+        function mostrarLetra(letra) {
+            alert("La letra es: " + letra);
+        }
+    </script>
+</body>
+</html>

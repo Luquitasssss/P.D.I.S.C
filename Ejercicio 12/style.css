@@ -1,0 +1,23 @@
+.letras {
+    cursor: pointer;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .col {
+    border: 1px solid #ccc;
+    padding: 0;
+    margin: 1px;
+  }
+  
+  #dibujo {
+    margin-top: 20px;
+  }
+  
+  #mensaje {
+    margin-top: 20px;
+    color: black;
+    text-align: center;
+  }
+  
